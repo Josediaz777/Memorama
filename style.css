@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.memorama{
+  padding: 30px;
+}
+.cards, .card, .vista{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards{
+  height: 550px;
+  width: 550px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards .card{
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+.card .vista{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  background: rgb(255, 242, 126);
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-shadow: 0 6px 13px rgba(0,0,0,0.1);
+  transition: transform 0.50s linear;
+  border: 1px solid black;
+}
+.card .delantera img{
+  width: 25px;
+}
+.card .trasera img{
+  max-width: 90px;
+}
+.card .trasera{
+  transform: rotateY(-180deg);
+}
+.card.flip .trasera{
+  transform: rotateY(0);
+}
+.card.flip .front-card{
+  transform: rotateY(180deg);
+}
