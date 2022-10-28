@@ -51,9 +51,15 @@ body{
 .card .trasera{
   transform: rotateY(-180deg);
 }
-.card.flip .trasera{
+.card.vuelta .trasera{
   transform: rotateY(0);
 }
-.card.flip .front-card{
+.card.vuelta .front-card{
   transform: rotateY(180deg);
+}
+.card.par{
+  box-shadow: 3px 3px 3px 3px rgb(46, 255, 39);
+}
+.card.impar{
+  box-shadow: 3px 3px 3px 3px rgb(255, 39, 39);
 }
